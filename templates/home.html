@@ -1,0 +1,68 @@
+<html>
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+@import url('http://getbootstrap.com/dist/css/bootstrap.css');
+ html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+body {
+   background-color:lightgrey;
+   text-emphasis-color : black;
+}
+.jsonarea {
+    background-color:lightseagreen;
+    text-decoration-color: black;
+}
+</style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      
+                    </li>
+                </div>
+              </nav>
+              <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.1.0/bootstrap.min.js"></script>
+              <br><br>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">                  
+                <form method="post" id="ty>
+                    {% csrf_token %}
+                    {{ form.post }}
+                    <input type="text" name="firstname" value="" id="textinput">
+                    <br>
+                    <button type="submit" id="yy">Submit</button>
+                    </form>
+            </div>
+            <div class="col-md-8" id="jsono">
+                <textarea class="jsonarea" rows="22" cols="110"></textarea>
+            </div>
+        </div> 
+</div>
+
+<script type="text/javascript">
+        var inputBox = document.getElementById('textinput');
+    
+        inputBox.onkeyup = function(){
+                     document.getElementById('textinput').innerHTML = inputBox.value;
+                     document.getElementById("yy").click();
+
+                }
+    </script>
+</body>
+</html>
