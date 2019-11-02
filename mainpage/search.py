@@ -9,7 +9,6 @@ number = args.value
 
 #read csv, and split on "," the line
 csv_file = csv.reader(open('word.csv'), delimiter=",")
-
 q=[]
 #loop through csv list
 for row in csv_file:
