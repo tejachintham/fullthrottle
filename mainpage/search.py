@@ -6,7 +6,6 @@ parser.add_argument("--value","-q")
 args = parser.parse_args()
 #input number you want to search
 number = args.value
-
 #read csv, and split on "," the line
 csv_file = csv.reader(open('word.csv'), delimiter=",")
 q=[]

@@ -8,7 +8,7 @@ args = parser.parse_args()
 number = args.value
 
 #read csv, and split on "," the line
-csv_file = csv.reader(open('C:\\Users\\tejac\\search\\rankingtool\\word.csv'), delimiter=",")
+csv_file = csv.reader(open('word.csv'), delimiter=",")
 
 q=[]
 #loop through csv list
