@@ -19,7 +19,7 @@ class HomeView(TemplateView):
     def post(self, request):
         form = HomeForm(request.POST['firstname'])
         print(form.data)
-        cmd= "python C:\\Users\\tejac\\search\\rankingtool\\search.py -q "+str(form.data)
+        cmd= "python search.py -q "+str(form.data)
         print("her1")
         p = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print("her2")
